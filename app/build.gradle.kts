@@ -21,7 +21,7 @@ android {
             useSupportLibrary = true
         }
 
-        buildConfigField("String", "key", gradleLocalProperties(rootDir).getProperty("appcenter_key") as String)
+        buildConfigField("String", "key", "${System.env.appcenter_key}")
     }
 
     buildTypes {
