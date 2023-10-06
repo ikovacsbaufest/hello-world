@@ -21,7 +21,7 @@ android {
             useSupportLibrary = true
         }
 
-        buildConfigField("String", "key", "${System.env.appcenter_key}")
+        buildConfigField("String", "key", System.getenv("appcenter_key"))
     }
 
     buildTypes {
